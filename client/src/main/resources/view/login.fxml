@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane maxHeight="332.0" maxWidth="246.0" minHeight="332.0" minWidth="246.0" prefHeight="332.0" prefWidth="246.0" xmlns="http://javafx.com/javafx/8.0.231" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.client.controller.LoginController">
+  <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="195.0" minWidth="0.0" prefWidth="34.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="524.0" minWidth="10.0" prefWidth="173.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="145.0" minWidth="10.0" prefWidth="39.0" />
+  </columnConstraints>
+  <rowConstraints>
+      <RowConstraints maxHeight="77.0" minHeight="0.0" prefHeight="10.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="202.0" minHeight="10.0" prefHeight="118.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="138.0" minHeight="10.0" prefHeight="51.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="158.0" minHeight="4.0" prefHeight="58.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="158.0" minHeight="10.0" prefHeight="95.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <ImageView fx:id="logoImg" fitHeight="109.0" fitWidth="131.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+         <image>
+            <Image url="@../image/qq.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="accountField" prefHeight="41.0" prefWidth="173.0" promptText="输入账号" style="-fx-border-width: 0;" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+      <TextField fx:id="passwordField" prefHeight="41.0" prefWidth="173.0" promptText="输入密码" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+      <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+         <children>
+            <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="173.0" text="登录">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </Button>
+            <HBox alignment="CENTER_LEFT" prefHeight="44.0" prefWidth="173.0">
+               <children>
+                  <Label fx:id="forgetPwdLabel" prefHeight="17.0" prefWidth="94.0" text="忘记密码">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="registeLabel" text="注册账号" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</GridPane>

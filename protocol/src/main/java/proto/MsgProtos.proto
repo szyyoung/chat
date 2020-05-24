@@ -1,0 +1,57 @@
+syntax = "proto3";
+
+package com.example.proto;
+
+option java_package = "com.example.protocol";
+option java_outer_classname = "MsgProtos";
+
+
+message Msg {
+  HeadType type = 1;
+  string uid = 2;//用户id
+  string token = 3;//授权token
+  string version = 4;//客户端版本号
+  string seq = 5;
+  Request request = 6;
+  Response response = 7;
+  Notify notify = 8;
+}
+
+message Request {
+  MsgTypeEnum  msgType = 1;  //消息类型
+  string from = 2;
+  string to = 3;
+  string content = 4;
+  string url = 5;
+  string fromNick = 6;
+  string extension = 7;
+  string time = 8;
+}
+
+message Response {
+  uint32 code = 1; //0 成功 其他失败 错误码
+  string msg = 2; //错误描述
+  string seq = 3; //对应的请求seq
+}
+
+message Notify {
+  MsgTypeEnum msgType = 1;
+  string content = 2;
+  string from = 3;
+  string time = 4;
+}
+
+enum HeadType {
+  HEAT_BEAT = 0; //心跳包
+  MSG_REQUEST = 1;//消息发送请求包
+  MSG_RESPONSE = 2;//消息发送响应包
+  MSG_NOTIFY = 3;//服务器通知客户端消息包
+  CLIENT_AUTH = 4;//客户端授权
+}
+
+
+enum MsgTypeEnum {
+  SINGLE = 0;//单发
+  GROUP = 1;//群发
+}
+
