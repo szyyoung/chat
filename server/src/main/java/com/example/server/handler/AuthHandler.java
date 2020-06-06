@@ -1,6 +1,6 @@
 package com.example.server.handler;
 
-import com.example.domain.user.User;
+import com.example.domain.chat.User;
 import com.example.protocol.MsgProtos;
 import com.example.server.session.ServerSession;
 import com.example.server.session.SessionContext;

@@ -5,7 +5,9 @@ import javafx.application.Platform;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 import java.util.Objects;
 
@@ -16,9 +18,9 @@ public class MainLaunch extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
         primaryStageObj = primaryStage;
-        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("view/login.fxml")));
-        primaryStage.setTitle("QQ");
-        Scene mainScene = new Scene(root, 600, 400);
+        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("view/login.fxml"));
+        primaryStage.setTitle("chat");
+        Scene mainScene = new Scene(root, 273, 377);
         mainScene.setRoot(root);
         primaryStage.setResizable(false);
         primaryStage.setScene(mainScene);

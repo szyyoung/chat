@@ -1,6 +1,6 @@
 package com.example.server.session;
 
-import com.example.domain.user.User;
+import com.example.domain.chat.User;
 import io.netty.channel.Channel;
 import io.netty.util.AttributeKey;
 
